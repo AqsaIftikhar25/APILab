@@ -5,6 +5,11 @@
 #'
 #' @return vote information of certain member
 #'
+#'
+#' @import httr
+#' @import rjson
+#' @importFrom  httr content GET
+#' @importFrom  rjson fromJSON
 #' @examples
 #' x <- vott()
 #' cal_info(x,A Eriksson, Erik  (C))
@@ -15,8 +20,8 @@
 vott <- function(){
 
   #load package httr and jsonlite
-  library(httr)
-  library(jsonlite)
+  # library(httr)
+  # library(jsonlite)
 
   #get the URL
   vot_url <- "http://data.riksdagen.se/voteringlista/?bet=&punkt=&valkrets=&rost=&iid=&sz=500&utformat=json&gruppering=namn"
@@ -54,6 +59,9 @@ vott <- function(){
   attr(df,"class") <- "vott"
   return(df)
 }
+#' @rdname cal_info
+#' @method cal_info vott
+#' @export
 
 #define S3method
 cal_info <- function(x){
@@ -73,6 +81,7 @@ cal_info.vott <- function(x,name1){
   }
 }
 
+#cannot get the package function??
 
 # personaldata <- "http://data.riksdagen.se/personlista/?iid=&fnamn=&enamn=&f_ar=&kn=&parti=&valkrets=&rdlstatus=&org=&utformat=json&sort=sorteringsnamn&sortorder=asc&termlista="
 
