@@ -5,15 +5,21 @@
 \alias{vott}
 \title{vote information of parliament members}
 \usage{
-vott(name1)
+vott (name1,start,end)
+}
+\arguments{
+\item{name1}{A char.name of the politician}
+
+\item{start}{a integer. start year}
+
+\item{end}{a integer. end year}
 }
 \value{
-vote information of certain member
+l. vote information of certain member
 }
 \description{
 get the data from parliament API and return the attendance rate, attitude and participation of each member.
 }
 \examples{
-x <- vott()
-cal_info(x,A Eriksson, Erik  (C))
+l1 <- vott("C",2015,2020)
 }
