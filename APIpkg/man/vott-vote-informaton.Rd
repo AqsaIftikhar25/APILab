@@ -5,7 +5,7 @@
 \alias{vott}
 \title{vote information of parliament members}
 \usage{
-vott()
+vott(name1)
 }
 \value{
 vote information of certain member
