@@ -1,8 +1,10 @@
 #' vote information of parliament members
-#' @name vott vote informaton
+#' @name vott
+#'
 #' @param name1 A char.name of the politician
 #' @param startY a integer. start year
 #' @param endY a integer. end year
+#'
 #' @description get the data from parliament API and return the attendance rate, attitude and participation of each member.
 #'
 #' @return l. vote information of certain member
@@ -14,11 +16,10 @@
 #' @export
 #'
 
-#unfinished. need some input
 vott <- function(name1,startY,endY){
 
-  library(httr)
-  library(jsonlite)
+  # library(httr)
+  # library(jsonlite)
   # name1 <- "C"
   # startY <- 2015
   # endY <- 2020
