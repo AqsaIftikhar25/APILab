@@ -16,10 +16,10 @@
 #' @export
 #'
 
-vott <- function(name1,startY,endY){
+vott <- function(name1="C",startY=2016,endY=2020){
 
-  # library(httr)
-  # library(jsonlite)
+   library(httr)
+   library(jsonlite)
   # name1 <- "C"
   # startY <- 2015
   # endY <- 2020
