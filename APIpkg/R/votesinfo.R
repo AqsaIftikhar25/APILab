@@ -1,12 +1,12 @@
 #' vote information of parliament members
 #' @name vott vote informaton
 #' @param name1 A char.name of the politician
-#' @param start a integer. start year
-#' @param end a integer. end year
+#' @param startY a integer. start year
+#' @param endY a integer. end year
 #' @description get the data from parliament API and return the attendance rate, attitude and participation of each member.
 #'
 #' @return l. vote information of certain member
-#' @usage vott (name1,start,end)
+#' @usage vott (name1,startY,endY)
 #' @importFrom  jsonlite fromJSON
 #' @importFrom  httr GET content
 #' @examples
@@ -15,19 +15,19 @@
 #'
 
 #unfinished. need some input
-vott <- function(name1,start,end){
+vott <- function(name1,startY,endY){
 
-  # library(httr)
-  # library(jsonlite)
+  library(httr)
+  library(jsonlite)
   # name1 <- "C"
-  # start <- 2015
-  # end <- 2020
+  # startY <- 2015
+  # endY <- 2020
 
-  start_la <- start%%2000
-  end_la <- end%%2000
+  start_la <- startY%%2000
+  end_la <- endY%%2000
 
   chara <- NULL
-  for(i in start:end){
+  for(i in startY:endY){
     i_la <- i%%2000
     chara <- paste(i,"%2F",i_la+1,"&rm=",chara,sep = "",collapse = "")
   }
@@ -73,7 +73,6 @@ vott <- function(name1,start,end){
   #   }
   # }
 
-
   # make it into a dataframe
   l <- data.frame(cbind(name=nam,approve=approve))
   # attr(l,"class") <- "vott"
@@ -95,6 +94,7 @@ vott <- function(name1,start,end){
 #    return(x$name,x$approve)
 # }
 
+# usethis::use_testthat()
 
 
 
