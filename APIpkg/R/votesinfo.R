@@ -46,7 +46,9 @@ vott <- function(name1="C",startY=2016,endY=2020){
   nay <- as.numeric(vot_data$voteringlista$votering$Nej)
   absent <- as.numeric(vot_data$voteringlista$votering[,4])
   abstain <- as.numeric(vot_data$voteringlista$votering[,5])
-
+  
+  
+  
   # #calculate the attendance rate, attitude and participation
   # pon = pap = attend <- NULL
   # for(i in 1:length(vot_data$voteringlista$votering$namn)){
