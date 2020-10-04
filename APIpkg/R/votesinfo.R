@@ -72,7 +72,8 @@ vott <- function(name1,start,end){
   #     break
   #   }
   # }
-  class(nam)
+
+
   # make it into a dataframe
   l <- data.frame(cbind(name=nam,approve=approve))
   # attr(l,"class") <- "vott"

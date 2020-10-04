@@ -1,0 +1,40 @@
+---
+title: "APIvig"
+output: rmarkdown::html_vignette
+author: "Group 12"
+date: "`r Sys.Date()`"
+vignette: >
+  %\VignetteIndexEntry{APIvig}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(APIpkg)
+```
+
+#Description
+Get data from API
+
+#Usage
+```R
+APILab
+devtools::intall_github('AqsaIftikhar25/')
+```
+#Import
+```R
+library(APIpkg)
+```
+
+#Examples
+l <- vott("C",2015,2020)
+
+
+
