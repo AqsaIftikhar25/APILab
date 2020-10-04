@@ -25,7 +25,7 @@ vott <- function(){
 
   #get the URL
   vot_url <- "http://data.riksdagen.se/voteringlista/?bet=&punkt=&valkrets=&rost=&iid=&sz=500&utformat=json&gruppering=namn"
-  # vot_url2 <- "http://data.riksdagen.se/voteringlista/?bet=&punkt=&valkrets=&rost=&iid=&sz=1000&utformat=json&gruppering=namn"
+   vot_url2 <- "http://data.riksdagen.se/voteringlista/?bet=&punkt=&valkrets=&rost=&iid=&sz=1000&utformat=json&gruppering=namn"
 
   vot <- GET(vot_url)
 
@@ -43,7 +43,6 @@ vott <- function(){
   #calculate the attendance rate, attitude and participation
   pon = pap = attend <- NULL
   for(i in 1:length(vot_data$voteringlista$votering$namn)){
-
       # the attitde is positive or negtive
       pon[i] <- approve[i]/(approve[i]+nay[i])
 
