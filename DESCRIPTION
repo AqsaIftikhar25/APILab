@@ -9,7 +9,6 @@ Imports:httr,jsonlite
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Depends:httr,jsonlite
 RoxygenNote: 7.1.1
 Suggests: 
     testthat,

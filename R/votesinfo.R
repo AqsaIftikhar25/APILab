@@ -12,10 +12,12 @@
 #' @usage vott (name1,startY,endY)
 #' @examples
 #' l1 <- vott("C",2015,2020)
-#' @export vott
+#' @export
 
 
 vott <- function(name1="C",startY=2016,endY=2020){
+
+  stopifnot(startY>2002,endY<=2020)
 
    # library(httr)
    # library(jsonlite)
@@ -42,7 +44,7 @@ vott <- function(name1="C",startY=2016,endY=2020){
   # nay <- as.numeric(vot_data$voteringlista$votering$Nej)
   # absent <- as.numeric(vot_data$voteringlista$votering[,4])
   # abstain <- as.numeric(vot_data$voteringlista$votering[,5])
- 
+
   # make it into a dataframe
   l <- data.frame(cbind(name=nam,approve=approve))
   return(l)
