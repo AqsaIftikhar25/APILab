@@ -21,12 +21,26 @@ library(APIpkg)
 ```
 
 #Description
-Get data from API
+Get data from parliament API and return the attendance rate, attitude and participation of each member.
+
+## Shiny application
+
+The shiny application contains **Shiny application** that call and use the data from *APIpkg* package and with use of that data which comes from **vott()** function, draws a histogram. This histogram is frequency of the vote information based on parties.
+
+
+The histogram can modify with a sidebar with a slider for approve votes.
+By slider, user is able to change the number of approve votes pack and get frequency of approve votes inside each pack.
+
+
+```
+shinyApp(ui = ui, server = server)
+```
+
 
 #Usage
 ```R
 APILab
-devtools::intall_github('AqsaIftikhar25/')
+devtools::install_github('AqsaIftikhar25/APILab', build_vignettes = TRUE, force = TRUE)
 ```
 #Import
 ```R
@@ -35,6 +49,8 @@ library(APIpkg)
 
 #Examples
 l <- vott("C",2015,2020)
+runGitHub (repo = "ShinyAPI", username = "AqsaIftikhar25", ref="main")
+
 
 
 
