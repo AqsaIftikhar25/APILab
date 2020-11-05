@@ -49,6 +49,8 @@ library(APIpkg)
 
 #Examples
 l <- vott("C",2015,2020)
+
+#Shiny Examples
 runGitHub (repo = "ShinyAPI", username = "AqsaIftikhar25", ref="main")
 
 
